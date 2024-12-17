@@ -1,0 +1,459 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2023 codewithsadee
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --overlay-bg: hsla(0, 3%, 13%, 0.5);
+  
+  /* Light theme */
+    --light-background: hsl(40, 12%, 95%); /* Soft beige background */
+    --light-on-background: hsl(0, 3%, 13%); /* Primary dark text */
+    --light-on-background-variant: hsl(20, 3%, 19%); /* Slightly lighter text */
+    --light-primary: hsl(141, 42%, 50%); /* Green accent for buttons and links */
+    --light-primary-hover: hsl(141, 35%, 45%); /* Darker hover for green accent */
+    --light-primary-container: hsl(142, 76%, 90%); /* Light green container background */
+    --light-error: hsl(1, 73%, 42%); /* Error red */
+    --light-active-indicator: hsl(141, 52%, 88%); /* Highlighted active indicators */
+    --light-image-background: hsl(0, 0%, 80%); /* Light gray placeholder for images */
+    --light-badge-btn: hsl(30, 58%, 88%); /* Badge/button background */
+    --light-on-badge-btn: hsl(24, 7%, 14%); /* Badge button text */
+    --light-outline: hsl(10, 19%, 88%); /* Outline for inputs/cards */
+    --light-input-outline: hsl(7, 7%, 73%); /* Neutral input borders */
+    --light-input-outline-hover: hsl(9, 3%, 52%); /* Darker hover for input outlines */
+    --light-alpha-10: hsla(0, 0%, 0%, 0.1); /* 10% black alpha */
+    --light-alpha-20: hsla(0, 0%, 0%, 0.2); /* 20% black alpha */
+
+
+  /*  Dark Theme */
+  --dark-background: hsl(0, 0%, 10%); /* Dark gray background */
+  --dark-on-background: hsl(0, 0%, 90%); /* Light text */
+  --dark-on-background-variant: hsl(0, 0%, 80%); /* Slightly dimmer text */
+  --dark-primary: hsl(141, 42%, 55%); /* Soft green accent */
+  --dark-primary-hover: hsl(141, 38%, 45%); /* Darker green hover */
+  --dark-primary-container: hsl(141, 22%, 20%); /* Deep green container */
+  --dark-error: hsl(1, 69%, 59%); /* Error red */
+  --dark-active-indicator: hsl(141, 25%, 22%); /* Active indicator background */
+  --dark-image-background: hsl(0, 0%, 30%); /* Dark gray for placeholders */
+  --dark-badge-btn: hsl(30, 28%, 13%); /* Badge button background */
+  --dark-on-badge-btn: hsl(30, 8%, 86%); /* Badge button text */
+  --dark-outline: hsl(11, 3%, 20%); /* Darker outline for cards */
+  --dark-input-outline: hsl(11, 3%, 29%); /* Input borders */
+  --dark-input-outline-hover: hsl(11, 3%, 58%); /* Lighter hover state */
+  --dark-alpha-10: hsla(0, 0%, 100%, 0.1); /* 10% white alpha */
+  --dark-alpha-20: hsla(0, 0%, 100%, 0.2); /* 20% white alpha */
+
+
+  /*  Typography */
+
+  --font-primary: 'DM Serif Display', serif;
+  --font-secondary: 'DM Sans', sans-serif;  
+
+  --fs-base: 62.5%;
+  --fs-display-large: 2.8rem;
+  --fs-display-medium: 3.2rem;
+  --fs-display-small: 2.6rem;
+  --fs-headline-small: 2.4rem;
+  --fs-title-medium: 1.6rem;
+  --fs-title-small: 1.4rem;
+  --fs-body-large: 1.6rem;
+  --fs-body-medium: 1.4rem;
+  --fs-label-large: 1.4rem;
+  --fs-label-medium: 1.2rem;
+  --fs-label-small: 1.1rem;
+
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+
+  /*  Border  */
+
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-circle: 50%;
+  --radius-pill: 500px;
+
+  /* Shadow */
+  --shadow-1: 0 -1px 8px hsla(0, 0%, 0%, 0.2);
+  --shadow-2: 0 2px 4px 1px hsla(0, 0%, 0%, 0.3);
+
+  /*  Other */
+  --header-height: 64px;
+  --mobile-nav-height: 80px;
+  --section-gap: 32px;
+
+}
+
+@media(prefers-reduced-motion: no-preference) {
+  :root {
+
+    --transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+    --transition-short: 200ms var(--transition-timing-function);
+    --transition-medium: 500ms var(--transition-timing-function);
+  }
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --background: var(--light-background); 
+  --on-background: var(--light-on-background); 
+  --on-background-variant: var(--light-on-background-variant);
+  --primary: var(--light-primary); 
+  --primary-hover: var(--light-primary-hover); 
+  --primary-container: var(--light-primary-container);
+  --error: var(--light-error); 
+  --active-indicator: var(--light-active-indicator); 
+  --image-background: var(--light-image-background);
+  --badge-btn: var(--light-badge-btn); 
+  --on-badge-btn: var(--light-on-badge-btn); 
+  --outline: var(--light-outline); 
+  --input-outline: var(--light-input-outline);
+  --input-outline-hover: var(--light-input-outline-hover);
+  --alpha-10: var(--light-alpha-10); 
+  --alpha-20: var(--light-alpha-20);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --background: var(--dark-background);
+  --on-background: var(--dark-on-background);
+  --on-background-variant: var(--dark-on-background-variant);
+  --primary: var(--dark-primary);
+  --primary-hover: var(--dark-primary-hover);
+  --primary-container: var(--dark-primary-container);
+  --error: var(--dark-error);
+  --active-indicator: var(--dark-active-indicator);
+  --image-background: var(--dark-image-background);
+  --badge-btn: var(--dark-badge-btn);
+  --on-badge-btn: var(--dark-on-badge-btn);
+  --outline: var(--dark-outline);
+  --input-outline: var(--dark-input-outline);
+  --input-outline-hover: var(--dark-input-outline-hover);
+  --alpha-10: var(--dark-alpha-10);
+  --alpha-20: var(--dark-alpha-20);
+}
+
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li { list-style: none;}
+
+a,
+img,
+span,
+input,
+button { display: block; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { height: auto; }
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input { width: 100%; }
+
+button {
+  color: inherit;
+  cursor: pointer;
+}
+
+html {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-base);
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-background);
+  font-size: var(--fs-body-medium);
+  font-weight: var(--weight-regular);
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-block: calc(var(--header-height) + 16px) var(--mobile-nav-height);
+  opacity: 0;
+  animation: fade 300ms var(--transition-timing-function) forwards ;
+}
+
+@keyframes fade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+main { flex-grow: 1; }
+
+:focus-visible { outline-color: var(--primary); }
+
+
+/*-----------------------------------*\
+  #TYPOGRAPHY
+\*-----------------------------------*/
+
+.display-large { 
+  font-family: var(--font-primary);
+  font-size: var(--fs-display-large);
+  font-weight: var(--weight-regular);
+  line-height: 32px;
+  letter-spacing: -0.25px;
+}
+
+.display-medium {
+  font-size: var(--fs-display-medium);
+  line-height: 36px;
+}
+
+.display-small {
+font-family: var(--font-primary);
+font-size: var(--fs-display-small);
+font-weight: var(--weight-regular);
+line-height: 32px;
+}
+
+.headline-small {
+  font-size: var(--fs-headline-small);
+  font-weight: var(--weight-regular);
+  line-height: 32px;
+}
+
+.title-medium {
+  font-size: var(--fs-title-medium);
+  font-weight: var(--weight-medium);
+  line-height: 24px;
+}
+
+.title-small {
+  font-size: var(--fs-title-small);
+  font-weight: var(--weight-medium);
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.body-large {
+  font-size: var(--fs-body-large);
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.body-medium {
+  font-size: var(--fs-body-medium);
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.label-large {
+  font-size: var(--fs-label-large);
+  font-weight: var(--weight-medium);
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.label-medium {
+  font-size: var(--fs-label-medium);
+  font-weight: var(--weight-medium);
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+.label-small {
+  font-size: var(--fs-label-small);
+  font-weight: var(--weight-medium);
+  line-height: 16px;
+  letter-spacing: 0.5px;
+
+}
+
+
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #COMPONENTS
+\*-----------------------------------*/
+
+/**
+ * Mobile nav
+ */
+
+
+/**
+ * Secondary tab
+ */
+
+
+/**
+ * Card
+ */
+
+
+/**
+ * Icon Button
+ */
+
+
+/**
+ * Button
+ */
+
+/* primary button */
+
+/* secondary button */
+
+/* badge button */
+
+/* filter button */
+
+
+/**
+ * Input
+ */
+
+
+/**
+ * Filter chip
+ */
+
+
+/**
+ * Badge
+ */
+
+
+/**
+ * Skeleton
+ */
+
+
+/**
+ * Snackbar
+ */
+
+
+
+
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #TAB
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #RECIPE SLIDER
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #TAG
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #FILTER BAR
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #RECIPE PAGE
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #DETAIL PAGE
+\*-----------------------------------*/
+
+/* Skeleton */
+
+
+
+
+
+/*-----------------------------------*\
+  #SAVED RECIPE PAGE
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
