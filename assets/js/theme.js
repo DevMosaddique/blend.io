@@ -7,7 +7,7 @@
 "use strict";
 
 const $HTML = document.documentElement;
-const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const isDark = window.matchMedia("(prefers-color-scheme: light)" /* Change to dark ... light ========> DARK !Important*/).matches;
 
 if (sessionStorage.getItem("theme")) {
     $HTML.dataset.theme = sessionStorage.getItem("theme");
