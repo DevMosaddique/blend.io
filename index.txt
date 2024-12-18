@@ -9,14 +9,14 @@ Saved Recipes
 
 #---------- MOBILE NAV ----------#
 
-<span class="material-symbols-outlined" aria-hidden="true">lunch_dining</span>
-Recipes
 
-<span class="material-symbols-outlined" aria-hidden="true">home</span>
+
+
+
 Home
 
-<span class="material-symbols-outlined" aria-hidden="true">book</span>
-Saved
+
+
 
 
 
