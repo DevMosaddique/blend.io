@@ -453,12 +453,15 @@ line-height: 32px;
 
 .theme-switch { margin-inline-start: auto; }
 
-[data-theme="light"] :where(.logo-dark, .theme-switch, .light-icon),
-[data-theme="dark"] :where(.logo-light, .theme-switch, .dark-icon) {
+[data-theme="light"] :where(.logo-dark, .light-icon),
+[data-theme="dark"] :where(.logo-light, .dark-icon) {
   display: none;
 }
 
-
+[data-theme="light"] .theme-switch,
+[data-theme="dark"] .theme-switch {
+  display: block;
+}
 /*-----------------------------------*\
   # MOBILE NAV
 \*-----------------------------------*/
