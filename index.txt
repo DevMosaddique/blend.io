@@ -28,19 +28,6 @@ Home
 
 #---------- TAB ----------# 
 
-Breakfast
-Lunch
-Dinner
-Snack
-Teatime
-
-alt = Recipe name
-
-Recipe name
-
-<span class="material-symbols-outlined" aria-hidden="true">schedule</span>
-2 minutes
-
 
 
 
@@ -48,114 +35,6 @@ Recipe name
 
 #---------- TAG ----------#
 
-Choose your health preference.
-
-Choosing your health preference is an important step towards achieving a healthier lifestyle.
-
-href = wheat-free
-Wheat-Free
-
-href = vegetarian
-Vegetarian
-
-href = vegan
-Vegan
-
-href = tree-nut-free
-Tree-Nut-Free
-
-href = sulfite-free
-Sulfite-Free
-
-href = sugar-conscious
-Sugar-Conscious
-
-href = soy-free
-Soy-Free
-
-href = shellfish-free
-Shellfish-Free
-
-href = sesame-free
-Sesame-Free
-
-href = red-meat-free
-Red-Meat-Free
-
-href = pork-free
-Pork-Free
-
-href = pecatarian
-Pescatarian
-
-href = peanut-free
-Peanut-Free
-
-href = paleo
-Paleo
-
-href = No-oil-added
-No oil added
-
-href = mustard-free
-Mustard-Free
-
-href = mollusk-free
-Mollusk-Free
-
-href = Mediterranean
-Mediterranean
-
-href = lupine-free
-Lupine-Free
-
-href = low-sugar
-Low Sugar
-
-href = low-potassium
-Low Potassium
-
-href = kosher
-Kosher
-
-href = kidney-friendly
-Kidney-Friendly
-
-href = keto-friendly
-Keto-Friendly
-
-href = immuno-supportive
-Immuno-Supportive
-
-href = gluten-free
-Gluten-Free
-
-href = fodmap-free
-FODMAP-Free
-
-href = fish-free
-Fish-Free
-
-href = egg-free
-Egg-Free
-
-href = DASH
-DASH
-
-href = dairy-free
-Dairy-Free
-
-href = crustacean-free
-Crustcean-Free
-
-href = celery-free
-Celery-Free
-
-href = alcohol-free
-Alcohol-Free
-
-href = alcohol-cocktail
-Alcohol-Cocktail
 
 
 
@@ -165,7 +44,7 @@ Copyright 2023 codewithsadee
 
 alt = Cook.io
 
-href = https://www.edamam.com/
+./recipes.html?health=https://www.edamam.com/
 edamam free recipe api
 
 
